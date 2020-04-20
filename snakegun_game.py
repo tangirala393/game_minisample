@@ -1,7 +1,7 @@
 n = int(input("no of attempts:"))
 import random
 li1 = ["snake","gun","water"]
-G,S,W,T,U = 0,0,0,0,0
+U,G,S,W,T = 0,0,0,0,0
 def choice_snake(n):        ######### Userinput ****  snake
     global G,S,T,W,U
     k = random.choice(li1)
@@ -40,7 +40,7 @@ for i in range(n):
         choice_gun(n)
     elif user_input == "water":
         choice_water(n)
-print(U,G,S,W,T)
+print("user:",U,"Gun:",G,"Snake",S,"Water:",W,"Tie",T)
 if U > max(S,G,W,T):
     print("\nCongratulations User won the game")
 elif S > max(U,G,W,T):
@@ -48,7 +48,8 @@ elif S > max(U,G,W,T):
 elif G > max(S,U,W,T):
     print("\nGun won the game")
 elif T > max(U,S,W,G):
-    print("\ngame was Tie")
+    print("\nGame was Tie")
+  
 
 
 
